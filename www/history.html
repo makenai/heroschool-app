@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Mobile Demos</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.structure.min.css">
+  <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.theme.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <script src="javascripts/jquery-1.11.1.min.js"></script>
+  <script src="javascripts/jquery.mobile.custom.min.js"></script>
+  <script src="javascripts/onerror.js"></script>
+  <script src="javascripts/console.log.js"></script>
+  <!-- <script src="http://localhost/cordova.js"></script> 
+  <script src="components/steroids-js/steroids.js"></script> -->
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+</head>
+<body>
+<div data-role="page" class="jqm-demos jqm-home">
+  <img src="images/logo.png" alt="Hero School">
+  <h2>History</h2>
+  <br>
+  <p>Hero School, as a Transformational Leadership Model, includes licensed facilitators and organizations including non-profits like Hero School Initiatives. Each Character Change® leader and provider is guided by the overarching vision of founder, Tiger Todd: “To help people be free to live the lives they were meant for.”</p>
+  <br>
+  <br>
+  <h2>Backgrond</h2>
+  <br>
+  <p>Following his philanthropy, Mr. Todd was led to Ethel Pearson Park in his hometown of Las Vegas. On this Saturday, 1800 homeless people were lined up to receive a hot meal from the charity he was supporting. Mr. Todd thought, “Was this all that could be done?”</p>
+  <br>
+  <p>Having retired from his electronics business, he applied his penchant for troubleshooting back to the park the following week, ultimately making it his life’s mission to find out why so many people were in this condition, and change their history.</p>
+  <br>
+  <p>Through his direct interviews that first day in the park and over the next couple of weeks, Mr. Todd kept hearing the same four things – evoke responses indicating the same four habits. He assumed these were the root causes of homelessness. Clearly one couldn’t run a business or even be employed by one by exhibiting any one of these behaviors. The following week, Mr. Todd rented a stage and 300 chairs, collaborated with numerous businesses to build a sound system capable of reaching deep into the neighborhood, and recruited 20 of his friends and clients for his first outreach and “Hero School” on a cold December Day in 1995.</p>
+  <br>
+  <p>Mr. Todd told the homeless they’d have to sit through his class before they received food, clothing and goods, whether they liked it or not. A little over three years later, over 9,200 of the 10,000 homeless individuals attending these ad hoc classes had changed their lives. With only 13 homeless people left in the park in 1999, and the homeless census indicating the population in Las Vegas had decreased by nearly 10,000 during that 3-year stretch, Mr. Todd redirected his energy and resources into prevention through public school presentations.</p>
+  <br>
+  <p>Using the newly-developed Hero School model before homelessness, he pioneered Academic Engagement in 1998, inspiring teens to learn from adults – instead of TV or each other. Test scores instantly rose by double-digits, attendance increased as did graduation rates, but only with the 200,000 students in Tiger’s assemblies.</p>
+</div>
+<script type="text/javascript">
+  Parse.initialize("MQsZJkW6TDEWfmLKVsvwDzppmfzciXRFtWUcmpF3", "zKxxK8B5POhTaRxoiALPAYPBdG0ROmWsqhTxIb5e");
+  
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+    testObject.save({foo: "bar"}, {
+    success: function(object) {
+      $(".success").show();
+    },
+    error: function(model, error) {
+      $(".error").show();
+    }
+  });
+</script>
+</body>
+</html>
