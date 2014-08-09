@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery Mobile Demos</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.structure.min.css">
+  <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.theme.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <script src="javascripts/jquery-1.11.1.min.js"></script>
+  <script src="javascripts/jquery.mobile.custom.min.js"></script>
+  <script src="javascripts/onerror.js"></script>
+  <!--<script src="javascripts/console.log.js"></script> -->
+  <!-- <script src="http://localhost/cordova.js"></script> 
+  <script src="components/steroids-js/steroids.js"></script> -->
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
+</head>
+<body>
+<div data-role="page" class="jqm-demos jqm-home">
+  <img src="images/logo.png" alt="Hero School">
+
+  <form id="register">  
+    <label for="text-email">Email:</label>
+    <input name="text-email" id="text-email" value="" type="text">
+
+    <label for="text-pass">Password:</label>
+    <input name="text-pass" id="text-pass" value="" type="password">
+
+    <input type="submit" value="submit">
+  </form>
+
+  <form id="logIn">  
+    <label for="text-email-sign">Email:</label>
+    <input name="text-email-sign" id="text-email-sign" value="" type="text">
+
+    <label for="text-pass-sign">Password:</label>
+    <input name="text-pass-sign" id="text-pass-sign" value="" type="password">
+
+    <input type="submit" value="submit">
+  </form>
+
+</div>
+<script type="text/javascript">
+  Parse.initialize("MQsZJkW6TDEWfmLKVsvwDzppmfzciXRFtWUcmpF3", "zKxxK8B5POhTaRxoiALPAYPBdG0ROmWsqhTxIb5e");
+  
+  var TestObject = Parse.Object.extend("TestObject");
+  // var testObject = new TestObject();
+  /*  testObject.save({foo: "bar"}, {
+    success: function(object) {
+      $(".success").show();
+    },
+    error: function(model, error) {
+      $(".error").show();
+    }
+  });*/
+  $("#register").on("submit", function (e) {
+    e.preventDefault();
+    var jqThis = $(this),
+      newUser = new Parse.User();
+
+    newUser.set("username", jqThis.find("#text-email").val());
+    newUser.set("password", jqThis.find("#text-pass").val());
+
+    newUser.signUp(null, {
+      success: function(user) {
+        // Hooray! Let them use the app now.
+        console.log("success");
+      },
+      error: function(user, error) {
+        // Show the error message somewhere and let the user try again.
+        console.log("Error: " + error.code + " " + error.message);
+        // alert("Error: " + error.code + " " + error.message);
+      }
+    });
+  });
+
+  $("#logIn").on("submit", function (e) {
+    e.preventDefault();
+    var jqThis = $(this);
+    Parse.User.logIn(
+      jqThis.find("#text-email-sign").val(), 
+      jqThis.find("#text-pass-sign").val(),
+      {
+      success: function(user) {
+        // Do stuff after successful login.
+        console.log(user);
+      },
+      error: function(user, error) {
+        // The login failed. Check error to see why.
+        console.log("couldn't login");
+      }
+    });
+  });
+  
+</script>
+</body>
+</html>
