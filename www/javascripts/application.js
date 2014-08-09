@@ -1,5 +1,8 @@
-// Display the native navigation bar with the title "Hello World!"
-steroids.view.navigationBar.show("Hello World!");
+$( document ).ready(function() {
+  
+  $('#join-form').submit(function(e) {
+    e.preventDefault();
+    $.mobile.navigate("#thanks");
+  });
 
-// Set the WebView background color to white (effective on iOS only)
-steroids.view.setBackgroundColor("#FFFFFF");
+});
