@@ -23,6 +23,6 @@ body {
   border: 1px solid black;
 }
 .indexGrid > *:nth-of-type(4n) > a {
-  /*background-color: green;*/
+  /*backgrolund-color: green;*/
   margin-right: 0;
 }
