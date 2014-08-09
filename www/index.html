@@ -29,13 +29,13 @@ RESOURCES
 <div data-role="page" id="home">
   <a href="#"><img src="images/logo.png" alt="Hero School"></a>
   <ul data-role="gridview" class="ui-grid-c indexGrid">
-          <li><a class="ui-block-c" href="#events">Which Hero Are You?</a></li> <!-- events -->
-          <li><a class="ui-block-c" href="#blog">Test Your Powers</a></li>  <!-- blog -->
-          <li><a class="ui-block-c" href="#history">Save the Day</a></li> <!-- history -->
-          <li><a class="ui-block-c" href="#contact">Problems Solved</a></li> <!-- contact -->
-          <li><a class="ui-block-c" href="#pictures">Resources</a></li> <!-- pictures -->
-		      <li><a class="ui-block-c" href="#hero">Be a Hero</a></li> <!-- events -->
-          <li><a class="ui-block-c" href="#join">Join Us</a></li> <!-- events -->
+          <li class="ui-block-c"><a href="#events">Which Hero Are You?</a></li> <!-- events -->
+          <li class="ui-block-c"><a href="#blog">Test Your Powers</a></li>  <!-- blog -->
+          <li class="ui-block-c"><a href="#history">Save the Day</a></li> <!-- history -->
+          <li class="ui-block-c"><a href="#problems-solved">Problems Solved</a></li> <!-- contact -->
+          <li class="ui-block-c"><a href="#pictures">Resources</a></li> <!-- pictures -->
+		  <li class="ui-block-c"><a href="#hero">Be a Hero</a></li> <!-- events -->
+          <li class="ui-block-c"><a href="#join">Join Us</a></li> <!-- events -->
         </ul>
 </div>
 
@@ -96,13 +96,65 @@ RESOURCES
   </div>
 </div>
 
-<div data-role="page" id="contact">
+<div data-role="page" id="problems-solved">
 	<div data-role="header">
 		<a href="#" data-rel="back">Back</a>
-		<h1>Contact</h1>
+		<h1>Problems Solved</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<h3>Contact</h3>
+		<ul data-role="listview" class="ui-listview">
+			<li><a href="#for-schools">For Schools</a></li>
+			<li><a href="#for-business">For Business</a></li>
+			<li><a href="#for-homeless">For Homeless</a></li>
+		</ul>
+	</div>
+</div>
+
+<div data-role="page" id="for-schools">
+	<div data-role="header">
+		<a href="#" data-rel="back">Back</a>
+		<h1>For Schools</h1>
+	</div>
+	<div data-role="main" class="ui-content">
+		<h3>Make Your School a Hero School</h3>
+		<p>The Hero School Academic Engagement Model simply identifies and supplies what’s missing in Public Education. 14 years of active research with unparalleled results indicate it’s not the kids, it’s not the teachers, and it’s not the parents. It’s that the kids and their inner needs have changed faster than our education system and its need response did.</p>
+		<p>When used together with student-centered educators and human-centered outcomes, Hero School Academic Engagement interventions have been shown to ignite engagement and motivate learning in hours instead of years. Even among the worst performers and behavioral students, increases in attendance and standardized test results – often more than 30% – occur in a matter of days and weeks, against historical decreases of up to 22% each year without a Hero School Intervention. That’s Change. That’s fast. And it’s uniquely Hero School.</p>
+		<h3>HOW WOULD YOU LIKE TO RE-WRITE THE EDUCATION SENTENCE FOR YOUR KIDS?</h3>
+		<p>How did we find out what was missing in the education of American youth? We asked one overlooked, yet essential question:</p>
+		<h3>WHAT DO TODAY’S YOUNG PEOPLE ”NEED TO HEAR” TO BECOME WHO THEY “NEED TO BE?”</h3>
+		<p>Students today don’t need any more adults telling them “how it is,” particularly from the perspective of “how it was.” It is clear that even then adults in this technological generation could benefit from “revaluing their own values” and success definitions to see if they still hold water. What is important to you?</p>
+		<p>What our youth need are teachers, coaches, experts – authentic leaders – who have the courage to first validate what is important to them, and yet who simultaneously can inspire them to learn the life strategies and often difficult lessons that will help them find their path through the integrating of their inner and outer lives</p>
+		<p>Hero School® is that unique communication vehicle that quickly, seamlessly, and painlessly connects the inner needs and paths of today’s young people with the essential lessons taught by today’s educators, employers, experts and movies.</p>
+		<p>Hero School® further optimizes the relationships between students and the unique role of educators, employers and experts within the Education Equation, within their community and even in the “Hero Movie” that will be their future life.</p>
+		<p>Hero School® programs rapidly motivate continual learning and character development within and among students, while simultaneously motivating respect for and empowerment for and among educators and administrators.</p>
+		<h3>THE RESEARCH WOULD INDICATE THAT MORE RESEARCH IS THE PROBLEM, NOT THE SOLUTION</h3>
+		<p>There is more scientific research on human education and human behavior than at any time in history. And yet, student engagement, retention, and graduation rates are dropping faster than at any time in history. “So let me see if I understand correctly: since relying more on “Data” in public education, the worse our public education system has become?”</p>
+		<p>That is what the “Data” would suggest.</p>
+		<p>Maybe neither the problem nor the solution is more “Data.” Maybe what’s missing is something more “Human.”</p>
+		<h3>EMPOWER TEACHERS AND STUDENTS, NOT RESEARCH AND DATA.</h3>
+		<p>We’re supposed to Raise Kids, not Barriers.</p>
+		<p>Hero School® human-centered research indicates it’s not the “Data,” but rather, “Serving the Data” – a learned behavior increasing over the last 15 years – that has derailed many school districts from the mission of raising academically-engaged, self-reliant and socially-productive young adults from today’s children. We are, after all, humans – not things.</p>
+		<p>We believe that scientific research and technological advances should serve humanity, not the other way around. Hero School® “Circle of Life” presentations and workshops quickly re-align the “subject” and the “predicate” of the Human Education sentence by helping students, teachers and parents:</p>
+		<ul>
+			<li>Discover and Ignite the hidden treasures lying dormant inside them</li>
+			<li>Embrace and Integrate the many disparate parts of their “selves,” circumstances and environment</li>
+			<li>Declare a Destination and accelerate their inner and outer journeys so they become who they want to be, need to be and must be</li>
+		</ul>
+		<form id="join-form" method="post">
+			<label for="text-basic">School Name</label>
+			<input type="text" name="school-name" value="">
+			<label for="text-basic">Contact Name:</label>
+			<input type="text" name="contact-name" value="">
+			<label for="text-basic">Email:</label>
+			<input type="email" name="email" value="">
+			<label for="text-basic">Best Phone Number:</label>
+			<input type="text" name="best-phone-number">
+			<label for="text-basic">Request Date:</label>
+			<input type="text" name="request-date" value="">
+			<label>Comments:</label> <!-- not sure how to finish this for the text area label -->
+			<textarea cols="70" rows="5" name="Comments"></textarea>
+			<input type="submit" value="Submit!">
+		</form>
 	</div>
 </div>
 
@@ -112,7 +164,7 @@ RESOURCES
     <h1>Pictures</h1>
   </div>
   <div role="main" class="ui-content">
-  <!-- just sample for some pictures -->
+  <!-- just sample for pictures -->
 	<table border="white">
 		<tr>
 		<td><img src="http://staging.workmanarts.com/site/wp-content/uploads/2012/01/Lisa-Walker-dress-sample-image.gif" /></td>

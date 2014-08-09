@@ -527,6 +527,10 @@ button.ui-btn-icon-notext,
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
+
+.ui-block-c a {
+	margin: 5 15 5 15;
+}
 /* force new row */
 .ui-block-a {
 	clear: left;
