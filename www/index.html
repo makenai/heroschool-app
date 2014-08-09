@@ -12,8 +12,9 @@
   <script src="javascripts/jquery.mobile.custom.min.js"></script>
   <script src="javascripts/onerror.js"></script>
   <script src="javascripts/console.log.js"></script>
-  <script src="http://localhost/cordova.js"></script>
-  <script src="components/steroids-js/steroids.js"></script>
+  <!-- <script src="http://localhost/cordova.js"></script> 
+  <script src="components/steroids-js/steroids.js"></script> -->
+  <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.2.19.min.js"></script>
 </head>
 <body>
 <div data-role="page" class="jqm-demos jqm-home">
@@ -26,5 +27,19 @@
           <li class="ui-li-static ui-body-inherit ui-last-child">Ferrari</li>
         </ul>
 </div>
+<script type="text/javascript">
+  Parse.initialize("MQsZJkW6TDEWfmLKVsvwDzppmfzciXRFtWUcmpF3", "zKxxK8B5POhTaRxoiALPAYPBdG0ROmWsqhTxIb5e");
+  
+  var TestObject = Parse.Object.extend("TestObject");
+  var testObject = new TestObject();
+    testObject.save({foo: "bar"}, {
+    success: function(object) {
+      $(".success").show();
+    },
+    error: function(model, error) {
+      $(".error").show();
+    }
+  });
+</script>
 </body>
 </html>
