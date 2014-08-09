@@ -1,18 +1,35 @@
 $( document ).ready(function() {
-	console.log("document ready");
-
   function serializeToObject(prev, curr, index, arr) {
     prev[curr.name] = curr.value;
     return prev;
   }
+  function addParseProps(prev, curr, index, arr) {
+    return prev.set(index, curr);
+  }
+  var Recipient = Parse.Object.extend("Recipient");
 
-  $("#join-form").on("submit", function (e) {
+  $("body").on("submit", "#join-form", function (e) {
     e.preventDefault();
-    console.log("about to serialize");
-    var formObj = $(this).serializeArray()
-      .reduce(serializeToObject, {});
+    // console.log("about to serialize");
+    var formObj = _.reduce($(this).serializeArray(), 
+        serializeToObject, {}),
+      recipient = new Recipient;
 
-    console.log(formObj);
+    recipient = _.reduce(formObj, addParseProps, recipient);
+    
+    recipient.save(null, {
+      success: function(recip) {
+        // Hooray! Let them use the app now.
+        console.log("success");
+      },
+      error: function(recip, error) {
+        // Show the error message somewhere and let the user try again.
+        console.log("Error: " + error.code + " " + error.message);
+        // alert("Error: " + error.code + " " + error.message);
+      }
+    });
+
+
     if (false) {
 	    $.mobile.navigate("#thanks");
     }
