@@ -15,14 +15,14 @@ body {
   display: block;
   height: 60px;
   margin: 5px 1% 5px 0;
-  width: 24%;
+  width: 24.25%;
   text-decoration: none;
   text-align: right;
   vertical-align: bottom;
   padding: 5px 1%;
   border: 1px solid black;
 }
-.indexGrid .ui-block-c:nth-of-type(4n) {
-  background-color: green;
+.indexGrid > *:nth-of-type(4n) > a {
+  /*backgrolund-color: green;*/
   margin-right: 0;
 }
