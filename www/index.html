@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.structure.min.css">
   <link rel="stylesheet" href="stylesheets/jquery.mobile.custom.theme.min.css">
   <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+  <link rel="stylesheet" href="stylesheets/application.css">
   <script src="javascripts/jquery-1.11.1.min.js"></script>
   <script src="javascripts/jquery.mobile.custom.min.js"></script>
   <script src="javascripts/application.js"></script>
@@ -28,13 +29,13 @@ RESOURCES
 <div data-role="page" id="home">
   <a href="#"><img src="images/logo.png" alt="Hero School"></a>
   <ul data-role="gridview" class="ui-grid-c indexGrid">
-          <li class="ui-block-c"><a href="#events">Which Hero Are You?</a></li> <!-- events -->
-          <li class="ui-block-c"><a href="#blog">Test Your Powers</a></li>  <!-- blog -->
-          <li class="ui-block-c"><a href="#history">Save the Day</a></li> <!-- history -->
-          <li class="ui-block-c"><a href="#contact">Problems Solved</a></li> <!-- contact -->
-          <li class="ui-block-c"><a href="#pictures">Resources</a></li> <!-- pictures -->
-		      <li class="ui-block-c"><a href="#hero">Be a Hero</a></li> <!-- events -->
-          <li class="ui-block-c"><a href="#join">Join Us</a></li> <!-- events -->
+          <li><a class="ui-block-c" href="#events">Which Hero Are You?</a></li> <!-- events -->
+          <li><a class="ui-block-c" href="#blog">Test Your Powers</a></li>  <!-- blog -->
+          <li><a class="ui-block-c" href="#history">Save the Day</a></li> <!-- history -->
+          <li><a class="ui-block-c" href="#contact">Problems Solved</a></li> <!-- contact -->
+          <li><a class="ui-block-c" href="#pictures">Resources</a></li> <!-- pictures -->
+		      <li><a class="ui-block-c" href="#hero">Be a Hero</a></li> <!-- events -->
+          <li><a class="ui-block-c" href="#join">Join Us</a></li> <!-- events -->
         </ul>
 </div>
 
@@ -194,22 +195,5 @@ RESOURCES
   // });
 
 </script>
-<style type="text/css">
-.indexGrid {
-
-}
-.indexGrid .ui-block-c {
-  background-color: blue;
-  display: block;
-  height: 60px;
-  margin: 5px 1% 5px 0;
-  width: 24%;
-
-}
-.indexGrid .ui-block-c:nth-of-type(4n) {
-  background-color: green;
-  margin-right: 0;
-}
-</style>
 </body>
 </html>
