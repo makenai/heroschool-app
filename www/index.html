@@ -27,14 +27,14 @@ RESOURCES
 
 <div data-role="page" id="home">
   <a href="#"><img src="images/logo.png" alt="Hero School"></a>
-  <ul data-role="listview" class="ui-listview">
-          <li><a href="#events">Which Hero Are You?</a></li> <!-- events -->
-          <li><a href="#blog">Test Your Powers</a></li>  <!-- blog -->
-          <li><a href="#history">Save the Day</a></li> <!-- history -->
-          <li><a href="#contact">Problems Solved</a></li> <!-- contact -->
-          <li><a href="#pictures">Resources</a></li> <!-- pictures -->
-		  <li><a href="#hero">Be a Hero</a></li> <!-- events -->
-          <li><a href="#join">Join Us</a></li> <!-- events -->
+  <ul data-role="gridview" class="ui-grid-c indexGrid">
+          <li class="ui-block-c"><a href="#events">Which Hero Are You?</a></li> <!-- events -->
+          <li class="ui-block-c"><a href="#blog">Test Your Powers</a></li>  <!-- blog -->
+          <li class="ui-block-c"><a href="#history">Save the Day</a></li> <!-- history -->
+          <li class="ui-block-c"><a href="#contact">Problems Solved</a></li> <!-- contact -->
+          <li class="ui-block-c"><a href="#pictures">Resources</a></li> <!-- pictures -->
+		      <li class="ui-block-c"><a href="#hero">Be a Hero</a></li> <!-- events -->
+          <li class="ui-block-c"><a href="#join">Join Us</a></li> <!-- events -->
         </ul>
 </div>
 
@@ -194,5 +194,22 @@ RESOURCES
   // });
 
 </script>
+<style type="text/css">
+.indexGrid {
+
+}
+.indexGrid .ui-block-c {
+  background-color: blue;
+  display: block;
+  height: 60px;
+  margin: 5px 1% 5px 0;
+  width: 24%;
+
+}
+.indexGrid .ui-block-c:nth-of-type(4n) {
+  background-color: green;
+  margin-right: 0;
+}
+</style>
 </body>
 </html>
