@@ -56,9 +56,10 @@
 </div>
 
 <script id="detailHeroTemp" type="text/x-handlebars-template">
+<a href="#"><img id="hsLogo" src="icons/logo.png" alt="Hero School"></a>
 {{#with attributes}}
 	<div data-role="header">
-		<a href="#" data-rel="back">Back</a>
+		<!--<a href="#" data-rel="back">Back</a>-->
 		<h1>{{name}}</h1>
 	</div>
 	<div role="main" class="ui-content">
@@ -69,9 +70,10 @@
 		{{/if}}
 		<p class="italic-quote">{{quoteTwo}}</p>
 	</div>
-	<div class="ui-btn">
+	<div id="assembleBtn" class="ui-btn">
 		<a href="#assemble" data-hero-type="{{name}}">Assemble</a>
 	</div>
+	
 {{/with}}
 </script>
 
