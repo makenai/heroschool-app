@@ -110,12 +110,53 @@ span {
 
 }
 
-whichHeroGrid  .heroTypeLi {
-  width: 33%;
-  display: inline-block;
+.whichHeroGrid  .heroTypeLi {
+  display: block;
+      font-size: 1.5rem;
+    min-height: 8rem;
+    padding: 25px 1%;
+  border: 5px solid #004ea7;
+  width: 100%;
+  background-image: url('../images/bubbles.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  color: black !important;
+  text-decoration: none;
+  text-align: center;
 }
-whichHeroGrid li {
-  display: inline-block;
+.whichHeroGrid li:nth-of-type(1) .heroTypeLi {
+  background-color: #d148dd;
+}
+.whichHeroGrid li:nth-of-type(2) .heroTypeLi {
+  background-color: #6dafe4;
+}
+.whichHeroGrid li:nth-of-type(3) .heroTypeLi {
+  background-color: #da3573;
+}
+.whichHeroGrid li:nth-of-type(4) .heroTypeLi {
+  background-color: #df8813;
+}
+.whichHeroGrid li:nth-of-type(5) .heroTypeLi {
+  background-color: #26bbae;
+}
+.whichHeroGrid li:nth-of-type(6) .heroTypeLi {
+  background-color: #95bc1a;
+}
+.whichHeroGrid li:nth-of-type(7) .heroTypeLi {
+  background-color: #cab508;
+}
+.whichHeroGrid li:nth-of-type(8) .heroTypeLi {
+  background-color: #ad172b;
+}
+.whichHeroGrid li:nth-of-type(9) .heroTypeLi {
+  background-color: #ad8b17;
+}
+.whichHeroGrid li {
+  width: 32%;
+  margin: 0;
+  padding: 0;
+  float: left;
 }
 
 #detailHero {
