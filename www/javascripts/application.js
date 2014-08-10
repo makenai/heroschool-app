@@ -6,7 +6,12 @@ $( document ).ready(function() {
   function addParseProps(prev, curr, index, arr) {
     return prev.set(index, curr);
   }
-  var Recipient = Parse.Object.extend("Recipient");
+  var Recipient = Parse.Object.extend("Recipient"),
+    templateFuncs = {
+      "which-hero-are-you": function (jqContainer) {
+        console.log("whay");
+      }
+    };
 
   $("body").on("submit", "#join-form", function (e) {
     e.preventDefault();
@@ -33,6 +38,24 @@ $( document ).ready(function() {
     if (false) {
 	    $.mobile.navigate("#thanks");
     }
+  });
+
+  $(":mobile-pageContainer").on( "pagecontainerbeforeshow",
+    templLoad );
+
+  function templLoad(e, ui) {
+    // var prevPage = ui.prevPage;
+    var jqToPage = ui.toPage;
+    if (jqToPage.hasClass("untemp") || jqToPage.hasClass("alwaysTemp")) {
+      jqToPage.removeClass("untemp");
+      templateFuncs[jqToPage.attr("id")](jqToPage);
+    }
+    
+  }
+
+  $( ":mobile-pagecontainer" ).on( "pagecontainershow", function( event, ui ) {
+    // console.log( "This page was just hidden: ");
+    // console.log(ui.prevPage );
   });
 
 });
