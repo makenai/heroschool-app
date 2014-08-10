@@ -33,4 +33,11 @@ body {
 	font-style: italic;
 }
 
+/* save-the-day */
+
+span {
+	text-decoration: upcase;
+	font-weight: bold;
+}
+
  
