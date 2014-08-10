@@ -25,15 +25,21 @@
   <a href="#"><img id="hsLogo" src="icons/logo.png" alt="Hero School"></a>
   <img id="flyingImg" src="icons/flying.png" alt="">
   <ul id="homeMenu" data-role="gridview" class="ui-grid-b indexGrid">
-    <li><a class="ui-block-b" href="#pictures">Tools</a></li> 
-    <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
+    <!-- <li><a class="ui-block-b" href="#pictures">Tools</a></li>  -->
 	  <li>
 	  	<a  class="ui-block-b" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Donate</a></li> 
+    <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
     <li><a  class="ui-block-b" href="#assemble">Assemble</a></li> 
+<<<<<<< HEAD
     <li class="ui-block-b"><a id="whayButton" href="#which-hero-are-you">Which Hero Are You?</a></li>
     <li><a  class="ui-block-b" href="#test-your-powers">Test Your Powers</a></li>  
+=======
+    <li><a  class="ui-block-b" href="#test-your-pwers">Test Your Powers</a></li>  
+    <li class="ui-block-b"><a id="whayButton" href="#which-hero-are-you">Which Hero Are You?</a></li>
+>>>>>>> 8741c022b7e3daa9863f89e4114a5ed689614fdd
     <li><a  class="ui-block-b" href="#problems-solved">Problem Solved</a></li> 
 	  <li><a href="#hero-needed" class="ui-block-b">Hero Needed</a></li>
+    <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
     <li><a  class="ui-block-b" href="#save-the-day">Save the Day</a></li> 
   </ul>
 </div>
@@ -66,11 +72,11 @@
 		<h1>{{name}}</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<p class="italic-quote">{{quoteOne}}</p>
-		<p>{{descriptionOne}}</p>
 		{{#if image}}
 			<img src="{{image._url}}" alt="" />
 		{{/if}}
+		<p class="italic-quote">{{quoteOne}}</p>
+		<p>{{descriptionOne}}</p>
 		<p class="italic-quote">{{quoteTwo}}</p>
 	</div>
 	<div id="assembleBtn" class="ui-btn">

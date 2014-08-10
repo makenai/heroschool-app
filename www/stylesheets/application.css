@@ -57,12 +57,19 @@ body {
   color: #AD172B;
   text-decoration: none;
 }
-.indexGrid > *:nth-of-type(1) > a{
+.indexGrid > *:nth-of-type(1) > a,
+  .indexGrid > *:nth-of-type(7) > a{
   
   border-width: 10px 10px 5px;
   width: calc(33.3% + 5px);
 }
-.indexGrid > *:nth-of-type(3) > a{
+.indexGrid > *:nth-of-type(7) > a,
+  .indexGrid > *:nth-of-type(9) > a {
+  border-top-width: 5px;
+  border-bottom-width: 10px;
+}
+.indexGrid > *:nth-of-type(3) > a,
+  .indexGrid > *:nth-of-type(9) > a{
   
   border-left-width: 10px;
   border-top-width: 10px;
@@ -95,6 +102,13 @@ span {
 	font-weight: bold;
 }
 
+<<<<<<< HEAD
+=======
+.ui-mobile-viewport {
+  background-color: black;
+}
+
+>>>>>>> 8741c022b7e3daa9863f89e4114a5ed689614fdd
 #which-hero-are-you {
 
 }
@@ -109,6 +123,11 @@ span {
 
 #detailHero {
 
+}
+#detailHero .ui-content img {
+  float: right;
+  margin: 0 0 10px 1%;
+  max-width: 33%;
 }
 h1 {
   font-size: 3em !important;
