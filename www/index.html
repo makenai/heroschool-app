@@ -45,6 +45,10 @@
 			<li><a class="heroTypeLi ui-block-b" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
 		{{/each}}
 	</ul>
+	<br>
+	<form>
+		<input type="button" value="Back" onclick="window.location.href='#'">
+	</form>
 </script>
 
 <div data-role="page" class="untemp" id="which-hero-are-you">
@@ -52,10 +56,6 @@
 		<h1>Choose</h1>
 	</div>
 	<div role="main" class="ui-content">
-	<br>
-		<form>
-			<input type="button" value="Back" onclick="window.location.href='#'">
-		</form>
 	</div>
 </div>
 
@@ -581,7 +581,6 @@ G
 
 <div data-role="page" id="heroes-needed">
 	<div data-role="header">
-		<a href="#" data-rel="back">Back</a>
 		<h1>Heroes Needed</h1>
 	</div>
 	<div role="main" class="ui-content">
@@ -595,6 +594,10 @@ G
 			<input type="text" name="location" value="">
 			<input type="submit" value="Submit!">
     </form>
+	<br>
+		<form>
+			<input type="button" value="Back" onclick="window.location.href='#'">
+		</form>
 	</div>
 </div>
 
