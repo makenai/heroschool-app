@@ -89,7 +89,7 @@ body {
 /* save-the-day */
 
 span {
-	text-decoration: upcase;
+	/* text-decoration: upcase; */
 	font-weight: bold;
 }
 
