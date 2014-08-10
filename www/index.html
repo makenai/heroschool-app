@@ -30,10 +30,10 @@
 	  	<a  class="ui-block-b" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Donate</a></li> 
     <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
     <li><a  class="ui-block-b" href="#assemble">Assemble</a></li>
-    <li><a  class="ui-block-b" href="#test-your-pwers">Test Your Powers</a></li>  
+    <li><a  class="ui-block-b" href="#test-your-powers">Test Your Powers</a></li>  
     <li class="ui-block-b"><a id="whayButton" href="#which-hero-are-you">Which Hero Are You?</a></li>
     <li><a  class="ui-block-b" href="#problems-solved">Problem Solved</a></li> 
-	  <li><a href="#hero-needed" class="ui-block-b">Hero Needed</a></li>
+	  <li><a href="#heroes-needed" class="ui-block-b">Heroes Needed</a></li>
     <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
     <li><a  class="ui-block-b" href="#save-the-day">Save the Day</a></li> 
   </ul>
@@ -45,6 +45,10 @@
 			<li><a class="heroTypeLi ui-block-b" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
 		{{/each}}
 	</ul>
+	<br>
+	<form>
+		<input type="button" value="Back" onclick="window.location.href='#'">
+	</form>
 </script>
 
 <div data-role="page" class="untemp" id="which-hero-are-you">
@@ -52,10 +56,6 @@
 		<h1>Choose</h1>
 	</div>
 	<div role="main" class="ui-content">
-	<br>
-		<form>
-			<input type="button" value="Back" onclick="window.location.href='#'">
-		</form>
 	</div>
 </div>
 
@@ -581,7 +581,6 @@ G
 
 <div data-role="page" id="heroes-needed">
 	<div data-role="header">
-		<a href="#" data-rel="back">Back</a>
 		<h1>Heroes Needed</h1>
 	</div>
 	<div role="main" class="ui-content">
@@ -595,6 +594,10 @@ G
 			<input type="text" name="location" value="">
 			<input type="submit" value="Submit!">
     </form>
+	<br>
+		<form>
+			<input type="button" value="Back" onclick="window.location.href='#'">
+		</form>
 	</div>
 </div>
 
