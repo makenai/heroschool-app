@@ -8,6 +8,8 @@ body {
  }
 .ui-mobile .ui-page {
   background-image: url("../icons/bg.jpg");
+  background-repeat: repeat-x;
+  background-color: black;
 }
 #hsLogo {
   margin: 10px 0 0 2%;
@@ -109,22 +111,25 @@ span {
 #detailHero {
 
 }
-#detailHero h1 {
-  font-size: 3em;
+h1 {
+  font-size: 3em !important;
   color: white;
    /*-webkit-text-stroke-width: 4px;*/
    -webkit-text-stroke-color: #ad172b;
   text-shadow: 4px 4px 0px #ad172b;
   padding: 0;
 }
-#detailHero  .ui-header {
+  .ui-header {
   background-color: transparent !important;
   border-width: 0;
 }
-#detailHero  .ui-content {
+.ui-content {
   background-color: white;
   margin: 0 3%;
   padding: 10px 2%;
+}
+.ui-title {
+  margin: 0 !important;
 }
 #detailHero #assembleBtn {
   margin: 20px 3% 0;
@@ -137,6 +142,7 @@ background: -ms-linear-gradient(top, #d8c90b 0%,#a58105 100%); /* IE10+ */
 background: linear-gradient(to bottom, #d8c90b 0%,#a58105 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8c90b', endColorstr='#a58105',GradientType=0 ); /* IE6-9 */
 border-width: 0;
+margin-bottom: 20px;
 }
 #detailHero #assembleBtn > a{
   /*background-color: yellow;*/
