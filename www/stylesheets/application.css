@@ -102,22 +102,19 @@ span {
 	font-weight: bold;
 }
 
-<<<<<<< HEAD
-=======
 .ui-mobile-viewport {
   background-color: black;
 }
 
->>>>>>> 8741c022b7e3daa9863f89e4114a5ed689614fdd
 #which-hero-are-you {
 
 }
 
-#whichHeroGrid  .heroTypeLi{
+whichHeroGrid  .heroTypeLi {
   width: 33%;
   display: inline-block;
 }
-#whichHeroGrid li {
+whichHeroGrid li {
   display: inline-block;
 }
 
