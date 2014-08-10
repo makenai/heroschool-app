@@ -22,23 +22,26 @@
 <body>
 
 <div data-role="page" id="home">
-  <a href="#"><img src="images/logo.png" alt="Hero School"></a>
-  <ul data-role="gridview" class="ui-grid-c indexGrid">
-          <li class="ui-block-c"><a href="#which-hero-are-you">Which Hero Are You?</a></li> 
-          <li><a  class="ui-block-c" href="#test-your-powers">Test Your Powers</a></li>  
-          <li><a  class="ui-block-c" href="#save-the-day">Save the Day</a></li> 
-          <li><a  class="ui-block-c" href="#problems-solved">Problems Solved</a></li> 
-          <li><a  class="ui-block-c" href="#resources">Resources</a></li> 
-		  <li><a  class="ui-block-c" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Hero Up</a></li> 
-          <li><a  class="ui-block-c" href="#assemble">Assemble</a></li> 
-		  <li><a href="#heroes-needed" class="ui-block-c">Heroes Needed</a></li>
-        </ul>
+  <a href="#"><img id="hsLogo" src="icons/logo.png" alt="Hero School"></a>
+  <img id="flyingImg" src="icons/flying.png" alt="">
+  <ul id="homeMenu" data-role="gridview" class="ui-grid-b indexGrid">
+    <li><a class="ui-block-b" href="#pictures">Tools</a></li> 
+    <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
+	  <li>
+	  	<a  class="ui-block-b" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Donate</a></li> 
+    <li><a  class="ui-block-b" href="#assemble">Assemble</a></li> 
+    <li class="ui-block-b"><a id="whayButton" href="#which-hero-are-you">Which Hero Are You?</a></li>
+    <li><a  class="ui-block-b" href="#test-your-pwers">Test Your Powers</a></li>  
+    <li><a  class="ui-block-b" href="#problems-solved">Problem Solved</a></li> 
+	  <li><a href="#hero-needed" class="ui-block-b">Hero Needed</a></li>
+    <li><a  class="ui-block-b" href="#save-the-day">Save the Day</a></li> 
+  </ul>
 </div>
 
 <script id="whichHeroTemp" type="text/x-handlebars-template">
-	<ul data-role="listview" class="ui-listview">
+	<ul data-role="gridview" class="ui-grid-b whichHeroGrid">
 		{{#each heroes}}
-			<li><a href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
+			<li><a class="heroTypeLi ui-block-b" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
 		{{/each}}
 	</ul>
 </script>
@@ -49,19 +52,37 @@
 		<h1>Choose</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<ul data-role="listview" class="ui-listview">
-			<li><a href="#social">Social</a></li> <!-- A -->
-			<li><a href="#proven">Proven</a></li> <!-- B -->
-			<li><a href="#dual">Dual</a></li> <!-- C -->
-			<li><a href="#emergent">Emergent</a></li> <!-- D -->
-			<li><a href="#action">Action</a></li> <!-- E -->
-			<li><a href="#team">Team</a></li> <!-- F -->
-			<li><a href="#chosen">Chosen</a></li> <!-- G -->
-		</ul>
 	</div>
 </div>
+
+<script id="detailHeroTemp" type="text/x-handlebars-template">
+<a href="#"><img id="hsLogo" src="icons/logo.png" alt="Hero School"></a>
+{{#with attributes}}
+	<div data-role="header">
+		<!--<a href="#" data-rel="back">Back</a>-->
+		<h1>{{name}}</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<p class="italic-quote">{{quoteOne}}</p>
+		<p>{{descriptionOne}}</p>
+		{{#if image}}
+			<img src="{{image._url}}" alt="" />
+		{{/if}}
+		<p class="italic-quote">{{quoteTwo}}</p>
+	</div>
+	<div id="assembleBtn" class="ui-btn">
+		<a href="#assemble" data-hero-type="{{name}}">Assemble</a>
+	</div>
+	
+{{/with}}
+</script>
+
+<div data-role="page" id="detailHero">
+	
+</div>
+
 <!-- A -->
-<div data-role="page" id="social">
+<!-- <div data-role="page" id="social">
 	<div data-role="header">
 		<a href="#" data-rel="back">Back</a>
 		<h1>Social</h1>
@@ -78,7 +99,7 @@
 		</form>
 	</div>
 </div>
-<!-- B -->
+B
 <div data-role="page" id="dual">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -96,7 +117,7 @@
 		</form>
 	</div>
 </div>
-<!-- C -->
+C
 <div data-role="page" id="emergent">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -114,7 +135,7 @@
 		</form>
 	</div>
 </div>
-<!-- D -->
+D
 <div data-role="page" id="team">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -132,7 +153,7 @@
 		</form>
 	</div>
 </div>
-<!-- E -->
+E
 <div data-role="page" id="chosen">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -150,7 +171,7 @@
 		</form>
 	</div>
 </div>
-<!-- F -->
+F
 <div data-role="page" id="proven">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -181,7 +202,7 @@
 		</form>
 	</div>
 </div>
-<!-- G -->
+G
 <div data-role="page" id="action">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -199,7 +220,7 @@
 			<input type="button" value="Hero Up!" onclick="window.location.href='https://donatenow.networkforgood.org/HeroSchool'">
 		</form>
 	</div>
-</div>
+</div> -->
 
 
 
@@ -497,7 +518,18 @@ var $mcj = jQuery.noConflict(true);
       <label for="text-basic">Email:</label>
       <input type="email" name="email" value="">
       <label for="text-basic">Selfie:</label>
-      <input type="file" name="selfie">
+      <input type="file" id="selfieImage" name="selfie">
+
+      <label for="text-hero-type">Hero Type:</label>
+      <select id="text-hero-type">
+			  <option value="Action">Action</option>
+			  <option value="Proven">Proven</option>
+			  <option value="Chosen">Chosen</option>
+			  <option value="Team">Team</option>
+			  <option value="Emergent">Emergent</option>
+			  <option value="Dual">Dual</option>
+			  <option value="Social">Social</option>
+			</select>
       <label for="text-basic">Superpower:</label>
       <input type="text" name="superpower" value="">
       <label for="text-basic">Weakness:</label>
