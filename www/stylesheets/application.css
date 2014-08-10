@@ -1,30 +1,83 @@
 body {
 	/* Background color set as workaround for Legacy Android issue:
 	https://github.com/AppGyver/steroids/issues/381 */
-	background-color:#fff;
+	background-color:#000;
 }
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
+.ui-mobile .ui-page {
+  background-image: url("../icons/bg.jpg");
+}
+#hsLogo {
+  margin: 10px 0 0 2%;
+}
+#home {
+  position: relative;
+}
+#flyingImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  max-height: 275px;
+  margin-bottom: 200px;
+}
+
+#homeMenu {
+  z-index: 3;
+  position: relative;
+  margin: 100px 1% 0;
+}
 
 .indexGrid {
 
 }
-.indexGrid .ui-block-c {
+.indexGrid .ui-block-b, .indexGrid .ui-block-b:visited {
   /*background-color: blue;*/
   display: block;
-  height: 60px;
-  margin: 5px 1% 5px 0;
-  width: 24.25%;
+  /*height: 60px;*/
+  background-color: #949494;
+
+  width: 33.3%;
+  min-height: 8rem;
+
   text-decoration: none;
-  text-align: right;
+  text-align: center;
+  color: white;
   vertical-align: bottom;
-  padding: 5px 1%;
-  border: 1px solid black;
+  padding: 25px 1%;
+  font-size: 1.5rem;
+  border: 5px solid #ad172b;
+  text-shadow: 1px 1px 5px black;
 }
-.indexGrid > *:nth-of-type(4n) > a {
-  /*backgrolund-color: green;*/
+#whayButton {
+  color: #AD172B;
+  text-decoration: none;
+}
+.indexGrid > *:nth-of-type(1) > a{
+  
+  border-width: 10px 10px 5px;
+  width: calc(33.3% + 5px);
+}
+.indexGrid > *:nth-of-type(3) > a{
+  
+  border-left-width: 10px;
+  border-top-width: 10px;
+  width: calc(33.3% + 5px);
+}
+.indexGrid > *:nth-of-type(3n) > a {
+  
   margin-right: 0;
+  border-right-width: 10px;
+}
+.indexGrid > *:nth-of-type(3n + 1) > a {
+  
+  border-left-width: 10px;
+}
+.indexGrid > .ui-block-b.hidden  {
+  visibility: hidden;
+  width: calc(33.3% - 10px);
 }
 
 /* Quotes */
@@ -40,4 +93,15 @@ span {
 	font-weight: bold;
 }
 
- 
+
+#which-hero-are-you {
+
+}
+
+#whichHeroGrid  .heroTypeLi{
+  width: 33%;
+  display: inline-block;
+}
+#whichHeroGrid li {
+  display: inline-block;
+}

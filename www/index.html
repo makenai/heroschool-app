@@ -22,23 +22,26 @@
 <body>
 
 <div data-role="page" id="home">
-  <a href="#"><img src="images/logo.png" alt="Hero School"></a>
-  <ul data-role="gridview" class="ui-grid-c indexGrid">
-          <li class="ui-block-c"><a href="#which-hero-are-you">Which Hero Are You?</a></li> 
-          <li><a  class="ui-block-c" href="#test-your-pwers">Test Your Powers</a></li>  
-          <li><a  class="ui-block-c" href="#save-the-day">Save the Day</a></li> 
-          <li><a  class="ui-block-c" href="#problems-solved">Problems Solved</a></li> 
-          <li><a  class="ui-block-c" href="#pictures">Resources</a></li> 
-		  <li><a  class="ui-block-c" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Donate</a></li> 
-          <li><a  class="ui-block-c" href="#assemble">Assemble</a></li> 
-		  <li><a href="#hero-needed" class="ui-block-c">Hero Needed</a></li>
-        </ul>
+  <a href="#"><img id="hsLogo" src="icons/logo.png" alt="Hero School"></a>
+  <img id="flyingImg" src="icons/flying.png" alt="">
+  <ul id="homeMenu" data-role="gridview" class="ui-grid-b indexGrid">
+    <li><a class="ui-block-b" href="#pictures">Tools</a></li> 
+    <li class="ui-block-b hidden"><a href="#">Hidden</a></li> 
+	  <li>
+	  	<a  class="ui-block-b" href="https://donatenow.networkforgood.org/HeroSchool" target="_blank">Donate</a></li> 
+    <li><a  class="ui-block-b" href="#assemble">Assemble</a></li> 
+    <li class="ui-block-b"><a id="whayButton" href="#which-hero-are-you">Which Hero Are You?</a></li>
+    <li><a  class="ui-block-b" href="#test-your-pwers">Test Your Powers</a></li>  
+    <li><a  class="ui-block-b" href="#problems-solved">Problem Solved</a></li> 
+	  <li><a href="#hero-needed" class="ui-block-b">Hero Needed</a></li>
+    <li><a  class="ui-block-b" href="#save-the-day">Save the Day</a></li> 
+  </ul>
 </div>
 
 <script id="whichHeroTemp" type="text/x-handlebars-template">
-	<ul data-role="listview" class="ui-listview">
+	<ul data-role="gridview" class="ui-grid-b whichHeroGrid">
 		{{#each heroes}}
-			<li><a class="heroTypeLi" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
+			<li><a class="heroTypeLi ui-block-b" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
 		{{/each}}
 	</ul>
 </script>
@@ -49,8 +52,8 @@
 		<h1>Choose</h1>
 	</div>
 	<div role="main" class="ui-content">
-		<ul data-role="listview" class="ui-listview">
-		</ul>
+		<!-- <ul data-role="listview" class="ui-listview">
+		</ul> -->
 	</div>
 </div>
 
