@@ -12,6 +12,7 @@
   <script src="javascripts/jquery-1.11.1.min.js"></script>
   <script src="javascripts/jquery.mobile.custom.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
 
   <script src="javascripts/application.js"></script>
   <!-- <script src="http://localhost/cordova.js"></script> 
@@ -34,6 +35,14 @@
         </ul>
 </div>
 
+<script id="whichHeroTemp" type="text/x-handlebars-template">
+	<ul data-role="listview" class="ui-listview">
+		{{#each heroes}}
+			<li><a href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
+		{{/each}}
+	</ul>
+</script>
+
 <div data-role="page" class="untemp" id="which-hero-are-you">
 	<div data-role="header">
 		<a href="#" data-rel="back">Back</a>
@@ -41,13 +50,6 @@
 	</div>
 	<div role="main" class="ui-content">
 		<ul data-role="listview" class="ui-listview">
-			<li><a href="#social">Social</a></li>
-			<li><a href="#dual">Dual</a></li>
-			<li><a href="#emergent">Emergent</a></li>
-			<li><a href="#team">Team</a></li>
-			<li><a href="#chosen">Chosen</a></li>
-			<li><a href="#proven">Proven</a></li>
-			<li><a href="#action">Action</a></li>
 		</ul>
 	</div>
 </div>
