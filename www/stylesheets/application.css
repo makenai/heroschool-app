@@ -27,6 +27,10 @@ body {
   margin-right: 0;
 }
 
-/* button on every page inside "which hero are you" */
+/* Quotes */
+
+.italic-quote {
+	font-style: italic;
+}
 
  
