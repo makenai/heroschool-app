@@ -6,10 +6,29 @@ $( document ).ready(function() {
   function addParseProps(prev, curr, index, arr) {
     return prev.set(index, curr);
   }
+
   var Recipient = Parse.Object.extend("Recipient"),
     templateFuncs = {
       "which-hero-are-you": function (jqContainer) {
-        console.log("whay");
+        var Hero = Parse.Object.extend("Hero"),
+          query = new Parse.Query(Hero);
+        query.find({
+          success: function(results) {
+            // alert("Successfully retrieved " + results.length + " scores.");
+            // Do something with the returned Parse.Object values
+            console.log(results);
+            console.log(jqContainer);
+            var compiledTemplate = Handlebars.compile($("#whichHeroTemp").html());
+            var finishedTemplate = compiledTemplate({heroes: results});
+            var templateTarget = jqContainer.find(".ui-content:first");
+            // console.log(finishedTemplate);
+            templateTarget.html(finishedTemplate);
+            templateTarget.find("ul").listview();
+          },
+          error: function(error) {
+            console.error("Error: " + error.code + " " + error.message);
+          }
+        });
       }
     };
 
