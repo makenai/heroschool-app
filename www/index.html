@@ -37,7 +37,7 @@
 <script id="whichHeroTemp" type="text/x-handlebars-template">
 	<ul data-role="listview" class="ui-listview">
 		{{#each heroes}}
-			<li><a href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
+			<li><a class="heroTypeLi" href="#detailHero" data-hero-id="{{id}}">{{attributes.name}}</a></li>
 		{{/each}}
 	</ul>
 </script>
@@ -52,8 +52,33 @@
 		</ul>
 	</div>
 </div>
+
+<script id="detailHeroTemp" type="text/x-handlebars-template">
+{{#with attributes}}
+	<div data-role="header">
+		<a href="#" data-rel="back">Back</a>
+		<h1>{{name}}</h1>
+	</div>
+	<div role="main" class="ui-content">
+		<p class="italic-quote">{{quoteOne}}</p>
+		<p>{{descriptionOne}}</p>
+		{{#if image}}
+			<img src="{{image._url}}" alt="" />
+		{{/if}}
+		<p class="italic-quote">{{quoteTwo}}</p>
+	</div>
+	<div class="ui-btn">
+		<a href="#assemble" data-hero-type="{{name}}">Assemble</a>
+	</div>
+{{/with}}
+</script>
+
+<div data-role="page" id="detailHero">
+	
+</div>
+
 <!-- A -->
-<div data-role="page" id="social">
+<!-- <div data-role="page" id="social">
 	<div data-role="header">
 		<a href="#" data-rel="back">Back</a>
 		<h1>Social</h1>
@@ -67,7 +92,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- B -->
+B
 <div data-role="page" id="dual">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -82,7 +107,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- C -->
+C
 <div data-role="page" id="emergent">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -97,7 +122,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- D -->
+D
 <div data-role="page" id="team">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -112,7 +137,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- E -->
+E
 <div data-role="page" id="chosen">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -127,7 +152,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- F -->
+F
 <div data-role="page" id="proven">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -155,7 +180,7 @@
 		<a href="#assemble">Assemble</a>
 	</div>
 </div>
-<!-- G -->
+G
 <div data-role="page" id="action">
 	<div data-role="header">	
 		<a href="#" data-rel="back">Back</a>
@@ -170,7 +195,7 @@
 	<div class="ui-btn">
 		<a href="#assemble">Assemble</a>
 	</div>
-</div>
+</div> -->
 
 <div data-role="page" id="blog">
 	<div data-role="header">
@@ -385,7 +410,18 @@
       <label for="text-basic">Email:</label>
       <input type="email" name="email" value="">
       <label for="text-basic">Selfie:</label>
-      <input type="file" name="selfie">
+      <input type="file" id="selfieImage" name="selfie">
+
+      <label for="text-hero-type">Hero Type:</label>
+      <select id="text-hero-type">
+			  <option value="Action">Action</option>
+			  <option value="Proven">Proven</option>
+			  <option value="Chosen">Chosen</option>
+			  <option value="Team">Team</option>
+			  <option value="Emergent">Emergent</option>
+			  <option value="Dual">Dual</option>
+			  <option value="Social">Social</option>
+			</select>
       <label for="text-basic">Superpower:</label>
       <input type="text" name="superpower" value="">
       <label for="text-basic">Weakness:</label>
